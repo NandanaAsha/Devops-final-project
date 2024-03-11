@@ -13,7 +13,7 @@ pipeline{
         stage('Execute Playbook')
         {
             steps{
-                ansiblePlaybook credentialsId: 'ansiuser', disableHostKeyChecking: true, installation: 'myansible', inventory: 'hostfile.inv', playbook: 'Ansible_playbook.yml', vaultTmpPath: ''
+                ansiblePlaybook credentialsId: 'ansiblehost', disableHostKeyChecking: true, installation: 'myansible', inventory: 'hostfile.inv', playbook: 'Ansible_playbook.yml', vaultTmpPath: ''
             }
         }
         
